@@ -11,6 +11,7 @@
     --accent-color-secondary: #FFFFFF;
     --accent-color-secondary-transparency: rgba(255, 255, 255, 0.6);
     --accent-color-other: #000000;
+    --logo-color-primary: #AFB1B8;
     --card-set-gap: 30px;
     --portfolio-cards-inline: 3;
 }
@@ -274,6 +275,23 @@ img {
     letter-spacing: 0.03em;
     margin-top: 10px;
 }
+.clients {
+
+}
+.clients-list {
+    padding-top: 58px;
+}
+.clients-list > .item {
+    flex-basis: calc(100% - 5 * var(--card-set-gap)/ 6);
+    width: 170px;
+    height: 92px;
+    color: var(--logo-color-primary);
+    border: 1px solid var(--logo-color-primary);
+    border-radius: 4px;
+}
+.clients-list>.item:not(:first-child) {
+    margin-left: var(--card-set-gap);
+} 
 
 /* portfolio style*/
 .container .filter {
