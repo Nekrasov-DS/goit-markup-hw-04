@@ -12,6 +12,7 @@
     --accent-color-secondary-transparency: rgba(255, 255, 255, 0.6);
     --accent-color-other: #000000;
     --logo-color-primary: #AFB1B8;
+    --accent-logo-color: #2196F3;
     --card-set-gap: 30px;
     --portfolio-cards-inline: 3;
 }
@@ -37,6 +38,9 @@ img {
     max-width: 100%;
     height: auto;
 }
+svg {
+    display: inline-block;
+}
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -54,6 +58,10 @@ img {
 }
 .link {
     text-decoration: none;
+}
+.icon {
+    display: inline-block;
+    fill: currentColor;
 }
 .section {
     padding-top: 94px;
@@ -132,6 +140,10 @@ img {
 .page-header .contacts-list a {
     display: block;
     padding: 32px 0;
+    align-items: center;
+}
+.contacts-list .icon {
+    align-items: center;
 }
 
 /* footer style */
@@ -165,10 +177,23 @@ img {
 }
 /* studio style  */
 .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding: 0;
     background-color: var(--background-color-secondary);
     color: var(--accent-color-secondary);
+}
+.hero-background {
+    width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #C4C4C4;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero .container {
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 .title-hero {
     font-size: 44px;
@@ -210,14 +235,27 @@ img {
     text-align: center;
     letter-spacing: 0.03em;
 }
-.features-list > .item {
-    flex-basis: calc(100% - 3 * var(--card-set-gap)/ 4);
+.features-list .item {
+    flex-basis: calc(100% - 3 * var(--card-set-gap)/ 5);
     margin-left: var(--card-set-gap);
 }
 .features-list>.item:first-child {
     margin-left: 0;
 }
+.features-icons {
+    padding: 25px 0;
+    background-color: var(--background-color-other);
+    border-radius: 4px;
+}
+.features-icons .icon {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .features-title {
+    margin-top: 30px;
     color: var(--text-color-secondary);
     font-weight: 700;
     font-size: 14px;
@@ -249,7 +287,7 @@ img {
 .team-list {
     margin-top: 50px;
 }
-.team-list .item {
+.team-list>.item {
     flex-basis: calc(100% - 3 * var(--card-set-gap)/ 4);
     background-color: var(--background-color-primary);
     margin-left: var(--card-set-gap);
@@ -275,24 +313,75 @@ img {
     letter-spacing: 0.03em;
     margin-top: 10px;
 }
-.clients {
+.social-networks {
+    margin-top: 16px;
+    width: 206px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.social-networks>.item {
+    flex-basis: 44px;
+    
+}
+.social-networks>.item:not(:first-child) {                  
+    margin-left: 10px;
+}
+.social-networks .link {
+    display: block;
+    padding: 12px 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--logo-color-primary);
+}
+.social-networks .link:hover,
+.social-networks .link:focus {
+    background-color: var(--accent-logo-color);
+    color: var(--accent-color-secondary);
+}
+.social-networks .icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.clients {
+    padding: 100px 0;
 }
 .clients-list {
     padding-top: 58px;
-}
+}           
 .clients-list > .item {
     flex-basis: calc(100% - 5 * var(--card-set-gap)/ 6);
+}
+.clients-list>.item:not(:first-child) {
+    margin-left: var(--card-set-gap);
+}    
+.clients-list .link {
+    display: block;
     width: 170px;
     height: 92px;
+    padding: 16px 0;
     color: var(--logo-color-primary);
     border: 1px solid var(--logo-color-primary);
     border-radius: 4px;
 }
-.clients-list>.item:not(:first-child) {
-    margin-left: var(--card-set-gap);
-} 
-
+.clients-list .link:hover,
+.clients-list .link:focus {
+    color: var(--accent-logo-color);
+    border-color: var(--accent-logo-color);
+}
+.clients-list .icon {
+    display: block;
+    width: 106px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    fill: currentColor;
+}
 /* portfolio style*/
 .container .filter {
     justify-content: center;
