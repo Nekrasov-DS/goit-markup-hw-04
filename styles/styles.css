@@ -155,6 +155,9 @@ svg {
     background-color: var(--background-color-secondary);
     padding: 60px 0;
 }
+.page-footer .container {
+    align-items: baseline;
+}
 .logo-footer {
     color: var(--accent-color-secondary);
 }
@@ -180,12 +183,16 @@ svg {
     color: var(--accent-color-secondary-transparency);
 }
 .page-footer .social {
-    padding-top: 12px;
-    padding-bottom: 40px;
     margin-right: auto;
 }
-.page-footer .social:not(:first-child){
+.page-footer .block:not(:first-child) {
     margin-left: 70px;
+}
+.page-footer .social-networks {
+    margin-top: 20px;
+    width: 206px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-footer .social .call {
     font-style: normal;
@@ -351,7 +358,7 @@ svg {
     letter-spacing: 0.03em;
     margin-top: 10px;
 }
-.social-networks {
+.team .social-networks {
     margin-top: 16px;
     width: 206px;
     margin-left: auto;
@@ -451,7 +458,6 @@ svg {
 }
 .portfolio-list > .item {
     margin-left: var(--card-set-gap);
-    /*flex-basis: calc(100% / 3 - var(--card-set-gap));*/
     flex-basis: calc(100% / var(--portfolio-cards-inline) - var(--card-set-gap));
     border: 1px solid var(--border-color-secondary);
 }
@@ -460,9 +466,6 @@ svg {
 }
 .portfolio-list .card-footer {
     padding: 20px 24px;
-    /*border-right: 1px solid var(--border-color-secondary);
-    border-bottom: 1px solid var(--border-color-secondary);
-    border-left: 1px solid var(--border-color-secondary);*/
 }
 .portfolio .portfolio-title {
     color: var(--text-color-secondary);
