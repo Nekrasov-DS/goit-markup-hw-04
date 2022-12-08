@@ -10,6 +10,7 @@
     --active-color-primary: #188CE8;
     --accent-color-secondary: #FFFFFF;
     --accent-color-secondary-transparency: rgba(255, 255, 255, 0.6);
+    --icon-background-color: rgba(255, 255, 255, 0.1);
     --accent-color-other: #000000;
     --logo-color-primary: #AFB1B8;
     --accent-logo-color: #2196F3;
@@ -28,7 +29,8 @@ h4,
 h5,
 h6,
 p,
-ul {
+ul,
+em {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -177,6 +179,40 @@ svg {
 .page-footer .contacts-list .transparency {
     color: var(--accent-color-secondary-transparency);
 }
+.page-footer .social {
+    padding-top: 12px;
+    padding-bottom: 40px;
+    margin-right: auto;
+}
+.page-footer .social:not(:first-child){
+    margin-left: 70px;
+}
+.page-footer .social .call {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent-color-secondary);
+}
+.page-footer .social-networks>.item {
+    flex-basis: 44px;
+}
+.page-footer .social-networks .link {
+    display: block;
+    padding: 12px 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--icon-background-color);
+    color: var(--accent-color-secondary);
+}
+.page-footer .social-networks .link:hover,
+.page-footer .social-networks .link:focus {
+    background-color: var(--accent-logo-color);
+    color: var(--accent-color-secondary);
+}
 /* studio style  */
 .hero {
     padding: 0;
@@ -322,13 +358,12 @@ svg {
     margin-right: auto;
 }
 .social-networks>.item {
-    flex-basis: 44px;
-    
+    flex-basis: 44px; 
 }
 .social-networks>.item:not(:first-child) {                  
     margin-left: 10px;
 }
-.social-networks .link {
+.team .social-networks .link {
     display: block;
     padding: 12px 0;
     width: 44px;
@@ -336,8 +371,8 @@ svg {
     border-radius: 50%;
     color: var(--logo-color-primary);
 }
-.social-networks .link:hover,
-.social-networks .link:focus {
+.team .social-networks .link:hover,
+.team .social-networks .link:focus {
     background-color: var(--accent-logo-color);
     color: var(--accent-color-secondary);
 }
@@ -418,15 +453,16 @@ svg {
     margin-left: var(--card-set-gap);
     /*flex-basis: calc(100% / 3 - var(--card-set-gap));*/
     flex-basis: calc(100% / var(--portfolio-cards-inline) - var(--card-set-gap));
+    border: 1px solid var(--border-color-secondary);
 }
 .portfolio-list> .item:nth-child(n+4) {
     margin-top: var(--card-set-gap);
 }
 .portfolio-list .card-footer {
     padding: 20px 24px;
-    border-right: 1px solid var(--border-color-secondary);
+    /*border-right: 1px solid var(--border-color-secondary);
     border-bottom: 1px solid var(--border-color-secondary);
-    border-left: 1px solid var(--border-color-secondary);
+    border-left: 1px solid var(--border-color-secondary);*/
 }
 .portfolio .portfolio-title {
     color: var(--text-color-secondary);
@@ -441,4 +477,7 @@ svg {
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.03em;
+}
+.portfolio-list>.item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
