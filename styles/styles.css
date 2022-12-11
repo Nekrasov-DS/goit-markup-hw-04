@@ -183,18 +183,25 @@ svg {
     color: var(--accent-color-secondary-transparency);
 }
 .page-footer .social {
+    width: 206px;
     margin-right: auto;
 }
 .page-footer .block:not(:first-child) {
     margin-left: 70px;
 }
+.social-networks>.item {
+    flex-basis: 44px;
+    height: 44px;
+}
+.social-networks .item:not(:first-child) {
+    margin-left: 10px;
+}
 .page-footer .social-networks {
     margin-top: 20px;
-    width: 206px;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .page-footer .social .call {
     font-style: normal;
@@ -231,8 +238,6 @@ svg {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
     background-position: center;
     background-repeat: no-repeat;
-}
-.hero .container {
     padding-top: 200px;
     padding-bottom: 200px;
 }
@@ -330,7 +335,6 @@ svg {
 }
 .team-list>.item {
     flex-basis: calc(100% - 3 * var(--card-set-gap)/ 4);
-    height: 428px;
     background-color: var(--background-color-primary);
     margin-left: var(--card-set-gap);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -340,7 +344,7 @@ svg {
     margin-left: 0;
 }
 .team-list .card-footer {
-    margin-top: 30px;
+    padding: 30px 0;
 }
 .team-title {
     color: var(--text-color-secondary);
@@ -357,16 +361,11 @@ svg {
 }
 .team .social-networks {
     margin-top: 16px;
-    width: 206px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-.social-networks>.item {
-    flex-basis: 44px;
-    height: 44px; 
+    justify-content: center;
 }
 .team .social-networks .link {
     display: flex;
@@ -392,8 +391,11 @@ svg {
 .clients-list {
     margin-top: 50px;
     align-items: center;
-    justify-content: space-between;
-}           
+    justify-content: center;
+}
+.clients-list .item:not(:first-child) {
+    margin-left: var(--card-set-gap);
+} 
 .clients-list .link {
     width: 170px;
     height: 92px;
@@ -433,7 +435,7 @@ svg {
 .button-filter:hover, .button-filter:focus, .button-filter:active {
     color: var(--accent-color-secondary);
     background-color: var(--accent-color-primary);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .filter .item:not(:first-child) {
     margin-left: 9px;
